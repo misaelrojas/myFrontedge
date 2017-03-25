@@ -1,31 +1,35 @@
 <html lang="es">
 
 <head>
-  <title>Hola Mundo Front Edge</title>
-  <meta name="description" content="Hola mundo con tecnolgías tendencia en 2016 ">
+  <title>GTD Edge seed</title>
+  <meta name="description" content="Semilla para la aplicación Getting Thins Done ">
   <meta name="keywords" content="ES6, JSPM, AngularJS1.5 , Material Design">
   <meta name="author" content="albertobasalo@agorabinaria.com">
   <meta charset="utf-8" />
-  <!--jspm motor de carga de systemJS-->
   <script src="jspm_packages/system.js"></script>
-  <!--jspm fichero de configuración y dependencias-->
   <script src="config.js"></script>
   <script>
-    //nuestro programa
     System.import('main.js');
   </script>
+  <link href="jspm_packages/github/angular/bower-material@1.1.3/angular-material.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-<div ng-hide="true">Esperando la carga de la aplicación...</div>
-<h2 class="md-display-1">Hola Mundo</h2>
-<p class="md-body-2">Uno más uno son {{ 1 + 1 }}</p>
-
-<md-input-container>
-  <label class="md-caption">¿Cómo te llamas?</label>
-  <input type="text" ng-model="tuNombre" md-autofocus required md-maxlength="10">
-</md-input-container>
-<div class="md-display-2">Hola {{ tuNombre }}, bienvenido al Front Edge !!!</div>
+<body layout="column" layout-fill>
+<toolbar></toolbar>
+<md-content layout="row" flex>
+  <nav>
+    <sidenav></sidenav>
+  </nav>
+  <section layout="column" flex>
+    <lista-tareas></lista-tareas>
+    <md-divider></md-divider>
+    <aside>
+      <ficha-tarea></ficha-tarea>
+    </aside>
+  </section>
+</md-content>
+<fab></fab>
 </body>
 
 </html>

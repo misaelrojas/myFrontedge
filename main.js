@@ -1,21 +1,19 @@
-
 import * as angular from 'angular'
 import * as angularMaterial from 'angular-material'
-/*
- import * as toolbar from 'componentes/toolbar/toolbar'
- import * as sidenav from 'componentes/sidenav/sidenav'
- import * as listaTareas from 'componentes/lista-tareas/lista-tareas'
- import * as fichaTarea from 'componentes/ficha-tarea/ficha-tarea'
- import * as fab from 'componentes/fab/fab'
- */
+import * as angularUiRouter from 'angular-ui-router'
+
+import base from 'componentes/base/base'
 import portada from 'componentes/portada/portada'
+import tarea from 'componentes/tarea/tarea'
+import configuracion from 'componentes/configuracion/configuracion'
 
 const nombreApp = 'frontEdge'
-//angular.module(nombreApp,['ngMaterial', toolbar.nombre, sidenav.nombre, listaTareas.nombre, fichaTarea.nombre, fab.nombre])
-angular.module(nombreApp,['ngMaterial', portada])
+
+angular.module(nombreApp, ['ngMaterial', 'ui.router', base, portada, tarea, configuracion])
+  .config(($urlRouterProvider) => $urlRouterProvider.otherwise('/'))
 
 let documentoHTML = angular.element(document)
 
-let iniciarApp = ()=>angular.bootstrap(documentoHTML,[nombreApp])
+let iniciarApp = () => angular.bootstrap(documentoHTML, [nombreApp])
 
 documentoHTML.ready(iniciarApp)

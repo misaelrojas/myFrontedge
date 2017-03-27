@@ -1,13 +1,20 @@
 import * as angular from 'angular'
+import * as angularUiRouter from 'angular-ui-router'
 
-import * as toolbar from 'componentes/toolbar/toolbar'
-import * as sidenav from 'componentes/sidenav/sidenav'
-import * as listaTareas from 'componentes/lista-tareas/lista-tareas'
-import * as fichaTarea from 'componentes/ficha-tarea/ficha-tarea'
-import * as fab from 'componentes/fab/fab'
+import listaTareas from 'componentes/portada/lista-tareas/lista-tareas'
 
 const nombreComponente = 'portada'
 
-angular.module(nombreComponente, [toolbar.nombre, sidenav.nombre, listaTareas.nombre, fichaTarea.nombre, fab.nombre])
+let configurarEstado = ($stateProvider) => {
+    $stateProvider
+        .state(nombreComponente, {
+            url: '/',
+            template: '<lista-tareas></lista-tareas>'
+        });
+}
+
+angular.module(nombreComponente, ['ui.router',listaTareas])
+  .config(configurarEstado)
+
     
 export default nombreComponente

@@ -19,10 +19,6 @@
   ],
   "author": "webmaster@misaelrojas.com",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/misaelrojas/myFrontedge/issues"
-  },
-  "homepage": "https://github.com/misaelrojas/myFrontedge#readme",
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.6.3",

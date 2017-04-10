@@ -16,7 +16,7 @@ const nombreApp = 'frontEdge'
 angular.module(nombreApp, ['ngMaterial', 'ui.router', base, portada, tarea, configuracion, navegacion])
   .config(['$urlRouterProvider',($urlRouterProvider) => $urlRouterProvider.otherwise('/')])
 
-
+  
 let documentoHTML = angular.element(document)
 
 let iniciarApp = () => angular.bootstrap(documentoHTML, [nombreApp])

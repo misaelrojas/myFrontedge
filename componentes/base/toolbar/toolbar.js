@@ -5,9 +5,9 @@ const raiz ='./componentes/base/'
 const nombreComponente = 'toolbar'
 
 angular.module(nombreComponente, ['ngMaterial'])
-  .component(nombreComponente, {
-    templateUrl: `${raiz}${nombreComponente}/${nombreComponente}.html`
-  })
+    .component(nombreComponente, {
+      templateUrl: `${raiz}${nombreComponente}/${nombreComponente}.html`
+    })
 
 
 export default nombreComponente

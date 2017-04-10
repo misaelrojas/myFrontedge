@@ -11,10 +11,10 @@ const nombreFichero = 'lista-tareas'
 
 
 angular.module(nombreComponente, ['ngMaterial', filaTarea, moduloServicioTareas])
-  .component(nombreComponente, {
-    templateUrl: `${raiz}${nombreFichero}/${nombreFichero}.html`,
-    controller : ['servicioTareas',listaTareasCtrl]
-  })
+    .component(nombreComponente, {
+      templateUrl: `${raiz}${nombreFichero}/${nombreFichero}.html`,
+      controller : ['servicioTareas',listaTareasCtrl]
+    })
 
 
 export default nombreComponente

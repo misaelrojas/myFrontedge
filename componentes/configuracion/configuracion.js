@@ -19,6 +19,6 @@ angular.module(nombreComponente, ['ngMaterial','ui.router'])
     .component(nombreComponente, {
         templateUrl: `${raiz}${nombreComponente}/${nombreComponente}.html`
     })
-    .config(configurarEstado)
+    .config(['$stateProvider',configurarEstado])
 
 export default nombreComponente

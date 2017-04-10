@@ -22,6 +22,7 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
+    "css": "github:systemjs/plugin-css@0.1.33",
     "github:angular/bower-angular-animate@1.6.3": {
       "angular": "github:angular/bower-angular@1.6.3"
     },
